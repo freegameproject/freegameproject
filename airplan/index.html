@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<!--[if lt IE 7 ]>
+<html class="ie6" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 7 ]>
+<html class="ie7" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9" lang="zh-cmn-Hans"><![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=2.0,maximum-scale=1,user-scalable=no">
+    <title>飞机大战</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 640px;
+            margin: auto;
+
+        }
+
+        canvas {
+
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            display: none;
+        }
+
+        .gameOver {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: table;
+            height: auto;
+            line-height: 1.5em;
+            /* color: #fff; */
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .box {
+            width: 94%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 0 10px 0;
+            border-radius: 20px;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        img {
+            border: none;
+            width: 100%;
+            margin: auto;
+        }
+
+        .box img {
+            border: none;
+            max-width: 100%;
+            width: 80%;
+        }
+
+        h2 {
+            text-align: center;
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            display: block;
+        }
+
+        button {
+            text-align: center;
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            background: #f00;
+            font-size: 20px;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        #msg {
+            text-align: left;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        .bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .welcome {
+            display: none;
+            background-color: #120c4a;
+            background-image: url("img/welcome.png");
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            background-position: top, top, center, bottom;
+        }
+
+        .welcomelogo {
+            position: fixed;
+            width: 110px;
+            right: 10px;
+            top: 10px;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 50%;
+            height: auto;
+            margin: auto;
+            display: table;
+            text-align: center;
+        }
+
+        @keyframes play {
+            from {
+                transform: none;
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            to {
+                transform: none;
+            }
+        }
+
+        @-webkit-keyframes play {
+            from {
+                -webkit-transform: none;
+            }
+            50% {
+                -webkit-transform: scale(1.5);
+            }
+            to {
+                -webkit-transform: none;
+            }
+        }
+
+        #play {
+            position: fixed;
+            width: 90vw;
+            height: 10vw;
+            left: 0;
+            right: 0;
+            bottom: 10vw;
+            margin: auto;
+            /*animation: play 3s infinite;
+            -webkit-animation: play 1s infinite;*/
+        }
+
+        .author {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .paiming {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            width: 80%;
+            height: 30%;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: auto;
+            /* display: table; */
+            border-radius: 20px;
+            padding-top: 20px;
+            display: none;
+        }
+
+        .paiming p {
+            margin-top: 10px;
+        }
+
+        #replay_from_paiming {
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+            right: 0px;
+            /* margin: auto; */
+        }
+
+        .tips {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 80vw;
+            padding: 10vw;
+            height: 50vw;
+            background: rgba(255, 255, 255, 0.9);
+            margin: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div class="welcome">
+    <button id="play">开始游戏</button>
+</div>
+<div class="bg">
+    <div class="gameOver">
+        <div class="box">
+
+            <h2>游戏被你玩死了 >_< </h2>
+
+            <p id="msg"></p>
+
+
+            <p>
+                <button id="replay" class="replay">不服再战！</button>
+                <button id="submit">提交成绩看排名</button>
+            </p>
+
+        </div>
+    </div>
+</div>
+<div class="paiming">
+    <p>我的分数是：<span id="wodechengji">正在计算</span></p>
+
+    <p>排名：<span id="wodepaiming">正在获取中</span></p>
+
+    <p>第一名分数是: <span id="numberOne">正在获取中</span></p>
+    <button id="replay_from_paiming" class="replay">不服再战！</button>
+</div>
+<div class="tips">
+    <h2>小贴士：</h2>
+
+    <p>用手拖动自己飞机控制方向，点击自己的飞机开炮！</p>
+    <button id="hide_tips" class="hide_tips">知道啦～</button>
+</div>
+</body>
+<script src="../codetyphon.2.js"></script>
+<script src="../game.3.js"></script>
+<script>
+    window.onload = function () {
+        /* 自定义变量区 */
+        var zs = 0;
+        var sf = 0.5;
+        var top_y = 0;
+        var canRePlay = false;
+        /* 自定义函数区 */
+        function up() {
+
+            document.title = "消灭了" + zs + "个飞机";
+            _("#msg").html(document.title);
+        }
+        function gameOver() {
+            game.end();
+            canRePlay = false;
+            _(".bg").show();
+            //_("#replay").hide();
+
+            setTimeout(function () {
+                //_("#replay").show();
+                canRePlay = true;
+            }, 2000);
+        }
+        function showWelcome() {
+            _(".welcome").show();
+            _(".paiming").hide();
+        }
+        function show_tips() {
+            _('.tips').show();
+            game.Pause();
+        }
+        function hide_tips() {
+            game.Pause();
+            _('.tips').hide();
+        }
+        _('#hide_tips').click(function () {
+            hide_tips();
+        });
+        _("#play").click(function () {
+            zs = 0;
+
+            init_player();
+            _(".bg").hide();
+            _(".loading").hide();
+            _(".welcome").hide();
+            _(".paiming").hide();
+            setTimeout(function () {
+                show_tips();
+            }, 100);
+
+
+            play();
+        });
+        _("#submit").click(function () {
+            //ajax 变量 zs 到 php后端  返回后执行：
+            _(".paiming").show();
+            _(".bg").hide();
+            _.getjs('http://www.heimasheying.com/rank.php', {game_id: 2, score: zs}, function (json) {
+                var mingci = json.rank;
+                var diyiming = json.first_score;
+                _("#numberOne").html(diyiming);//第一名成绩
+                _("#wodechengji").html(zs);//我的成绩
+                _("#wodepaiming").html(mingci);//我的排名
+                document.title = "我消灭了" + zs + "个飞机，排第" + mingci + "名，你也来试试吧！";
+            }, function () {
+                //alert('err');
+            });
+            //
+        });
+        _(".replay").click(function () {
+            if (canRePlay) {
+
+                zs = 0;
+                init_player();
+                _(".bg").hide();
+                _(".loading").hide();
+                _(".welcome").hide();
+                _(".paiming").hide();
+                play();
+            }
+        });
+        game=new Game('canvas');
+        game.setPrecision(0.79);
+
+
+
+
+        var res=new Res();//设置资源文件
+        res.addRes('img','bg','img/bg.jpg?v9');
+        res.addRes('img','obj','img/obj.png?v9');
+        res.addRes('img','fire','img/fire.png?v1');
+        res.addRes('img','objfire','img/objfire.png?v2');
+        res.addRes('img','die','img/die.png?v2');
+        res.addRes('img','add','img/add.png?v2');
+        res.addRes('img','bomb','img/bomb.png?v2');
+        res.addRes('img','player','img/player.png?v6');
+        res.load(function(){
+            showWelcome();
+            audioManager=new AudioManager();
+            audioManager.add('bgmusic','bgmusic.mp3');
+            audioManager.add('kill','kill.mp3');
+            audioManager.play('bgmusic');
+        });
+
+
+
+
+        var scene_1 = new Scene();
+        game.setScene(scene_1);//设置游戏场景
+        function init_player() {
+            scene_1.clearAllSpirit();//清空所有精灵
+            //创建玩家精灵
+            var playerImg=res.getImage('player');
+            console.log(res);
+            var player = new Spirit('player', canvas.width / 2, canvas.height - playerImg.height / 2 * 0.5, playerImg.width, playerImg.height);
+            player.setScaleXY(0.5);
+            player.canDrag = true;
+            player.setImage(playerImg);
+            player.onclick(function () {
+                var fire = new Spirit('fire', this.x, this.y - this.h / 2 * this.scale, 5, 15);
+                fire.onCollision(function (obj) {
+                    if (obj.role === 'obj') {
+                        audioManager.play('kill');
+                        scene_1.delSpirit(obj);
+                        scene_1.delSpirit(this);
+                        zs += 1;
+                        var die = new Spirit('die', obj.x, obj.y, 30, 30);
+                        die.setImage(res.getImage('die'));
+                        die.live = 0;
+                        die.onRun(function () {
+                            this.live += 1;
+                            if (this.live === 10) {
+                                scene_1.delSpirit(this);
+                            }
+                        });
+
+                        scene_1.addSpirit(die);
+
+                        var addx = obj.x + obj.w * obj.scale;
+
+                        if (addx > canvas.width) {
+                            addx = obj.x - obj.w * obj.scale;
+                        }
+
+                        var add = new Spirit('add', addx, obj.y, 40, 40);
+                        add.setImage(res.getImage('add'));
+                        add.live = 0;
+                        add.onRun(function () {
+                            this.live += 1;
+                            if (this.live === 8) {
+                                scene_1.delSpirit(this);
+                            }
+                        });
+                        scene_1.addSpirit(add);
+                    }
+                    if (obj.role === 'objfire') {
+                        audioManager.play('kill');
+                        scene_1.delSpirit(obj);
+                        scene_1.delSpirit(this);
+
+                        var die = new Spirit('die', obj.x, obj.y, 30, 30);
+                        die.setImage(res.getImage('die'));
+                        die.live = 0;
+                        die.onRun(function () {
+                            this.live += 1;
+                            if (this.live === 10) {
+                                scene_1.delSpirit(this);
+                            }
+                        });
+                        scene_1.addSpirit(die);
+                    }
+                });
+                fire.onRun(function () {
+                    this.y -= 4;
+                    if (this.y <= -100) {
+                        scene_1.delSpirit(this);
+                    }
+                });
+                fire.setImage(res.getImage('fire'));
+                scene_1.addSpirit(fire);
+
+            });
+            player.addobjTime = 0;
+            player.bombTime = 0;
+            player.onRun(function () {
+                this.bombTime += 1;
+                if (this.bombTime === 50) {
+                    this.bombTime = 0;
+
+                    var bomb = new Spirit('bomb', Math.floor(Math.random() * canvas.width), -100, 50, 50);
+                    bomb.setImage(res.getImage('bomb'));
+                    bomb.onCollision(function (obj) {
+                        if (obj.role === 'player') {
+                            scene_1.delSpirit(this);
+                            scene_1.Spirits.map(function (one) {
+                                if (one.role === 'obj') {
+                                    //
+                                    scene_1.delSpirit(one);
+                                    zs += 1;
+                                    var die = new Spirit('die', one.x, one.y, 30, 30);
+                                    die.setImage(res.getImage('die'));
+                                    die.live = 0;
+                                    die.onRun(function () {
+                                        this.live += 1;
+                                        if (this.live === 10) {
+                                            scene_1.delSpirit(this);
+                                        }
+                                    });
+                                    scene_1.addSpirit(die);
+                                    var addx = one.x + one.w * one.scale;
+                                    if (addx > canvas.width) {
+                                        addx = one.x - one.w * one.scale;
+                                    }
+                                    var add = new Spirit('add', addx, one.y, 40, 40);
+                                    add.setImage(res.getImage('add'));
+                                    add.live = 0;
+                                    add.onRun(function () {
+                                        this.live += 1;
+                                        if (this.live === 8) {
+                                            scene_1.delSpirit(this);
+                                        }
+                                    });
+                                    scene_1.addSpirit(add);
+                                    //
+                                }
+                            });
+                        }
+                        bomb.onRun(function () {
+                            this.y += 1;
+                        });
+
+                    });
+                    scene_1.addSpirit(bomb);
+                }
+                if (this.x <= 0) {
+                    this.x = 0;
+                }
+                if (this.x >= canvas.width) {
+                    this.x = canvas.width;
+
+                }
+                if (this.y <= 0) {
+                    this.y = 0;
+                }
+                if (this.y >= canvas.height) {
+                    this.y = canvas.height;
+                }
+
+                this.addobjTime += 1;
+                if (this.addobjTime >= 80) {
+                    this.addobjTime = 0;
+                    var x = Math.floor(Math.random() * canvas.width);
+
+                    var objImg=res.getImage('obj');
+
+                    var obj = new Spirit('obj', x, -1 * objImg.height, objImg.width, objImg.height);
+
+                    obj.setImage(objImg);
+                    //obj.canDrag = true;
+                    obj.time = 0;
+
+                    obj.setScaleXY(0.5);
+                    obj.onCollision(function (obj) {
+
+                    });
+                    obj.onRun(function () {
+                        this.y += 0.6 + zs * 0.05;
+                        if (this.y >= canvas.height) {
+                            scene_1.delSpirit(this);
+                        }
+                        this.time += 1;
+                        if (this.time === 200) {
+                            this.time = 0;
+                            var objfire = new Spirit('objfire', this.x, this.y - this.h / 2 * this.scale, 15, 15);
+                            objfire.onCollision(function (obj) {
+                                if (obj.role === 'player') {
+                                    gameOver();
+                                }
+                            });
+                            objfire.scale=0.5;
+                            objfire.onRun(function () {
+                                this.y += 4;
+                                if (this.y >= canvas.height) {
+                                    scene_1.delSpirit(this);
+                                }
+                            });
+                            objfire.setImage(res.getImage('objfire'));
+                            scene_1.addSpirit(objfire);
+                        }
+                    });
+                    scene_1.addSpirit(obj);
+                }
+            });
+            player.onCollision(function (obj) {
+                if (obj.role === 'obj') {
+                    gameOver();
+                }
+            });
+            scene_1.addSpirit(player);
+        }
+         play=function(){
+            var bgImg=res.getImage('bg');
+            console.log(game);
+            game.play(function(){
+                c.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+            },function(){
+                //c.drawImage(G.res.zs, 10, 10, G.res.lover.width / 4, G.res.lover.height / 4);
+                c.font = "20px Courier New";
+                c.textAlign = 'left';
+                c.textBaseline = 'top';
+                c.fillStyle = "#ffffff";
+                c.fillText("已消灭飞机:" + zs + " 架", 20, 15);
+                up();
+            });
+        }
+
+
+        var tjimg = new Image();
+        tjimg.src = "http://img.users.51.la/18609443.asp";
+
+    }
+</script>
+</html>
