@@ -278,6 +278,50 @@
 <script src="../game.3.js"></script>
 <script>
     window.onload = function () {
+
+        gameRender = GameMaker.getGameRender();
+
+        game = GameMaker.getGame('canvas');
+        game.setPrecision(0.79);
+
+        res = GameMaker.getRes();
+        res.addRes('img', 'bg', 'img/bg.jpg?v9');
+        res.addRes('img', 'obj', 'img/obj.png?v9');
+        res.addRes('img', 'fire', 'img/fire.png?v1');
+        res.addRes('img', 'objfire', 'img/objfire.png?v2');
+        res.addRes('img', 'die', 'img/die.png?v2');
+        res.addRes('img', 'add', 'img/add.png?v2');
+        res.addRes('img', 'bomb', 'img/bomb.png?v2');
+        res.addRes('img', 'player', 'img/player.png?v6');
+        res.load(function () {
+            showWelcome();
+            var bgImg = res.getImage('bg');
+            game.setRun(function () {
+                c.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+            }, function () {
+                //c.drawImage(G.res.zs, 10, 10, G.res.lover.width / 4, G.res.lover.height / 4);
+                c.font = "20px Courier New";
+                c.textAlign = 'left';
+                c.textBaseline = 'top';
+                c.fillStyle = "#ffffff";
+                c.fillText("已消灭飞机:" + zs + " 架", 20, 15);
+                up();
+            });
+        });
+
+        audioManager = GameMaker.getAudioManager();
+        audioManager.add('bgmusic', 'bgmusic.mp3');
+        audioManager.add('kill', 'kill.mp3');
+        audioManager.play('bgmusic');
+        scene_1 = GameMaker.getScene();
+
+
+        spirit = GameMaker.getSpirit();
+
+        game.setScene(scene_1);//设置游戏场景
+        gameRender.setGame(game);//设置游戏
+
+
         /* 自定义变量区 */
         var zs = 0;
         var sf = 0.5;
@@ -289,8 +333,9 @@
             document.title = "消灭了" + zs + "个飞机";
             _("#msg").html(document.title);
         }
+
         function gameOver() {
-            game.end();
+            gameRender.stop();
             canRePlay = false;
             _(".bg").show();
             //_("#replay").hide();
@@ -300,18 +345,22 @@
                 canRePlay = true;
             }, 2000);
         }
+
         function showWelcome() {
             _(".welcome").show();
             _(".paiming").hide();
         }
+
         function show_tips() {
             _('.tips').show();
-            game.Pause();
+            gameRender.start();
         }
+
         function hide_tips() {
-            game.Pause();
+            gameRender.stop();
             _('.tips').hide();
         }
+
         _('#hide_tips').click(function () {
             hide_tips();
         });
@@ -358,38 +407,12 @@
                 play();
             }
         });
-        game=new Game('canvas');
-        game.setPrecision(0.79);
 
 
-
-
-        var res=new Res();//设置资源文件
-        res.addRes('img','bg','img/bg.jpg?v9');
-        res.addRes('img','obj','img/obj.png?v9');
-        res.addRes('img','fire','img/fire.png?v1');
-        res.addRes('img','objfire','img/objfire.png?v2');
-        res.addRes('img','die','img/die.png?v2');
-        res.addRes('img','add','img/add.png?v2');
-        res.addRes('img','bomb','img/bomb.png?v2');
-        res.addRes('img','player','img/player.png?v6');
-        res.load(function(){
-            showWelcome();
-            audioManager=new AudioManager();
-            audioManager.add('bgmusic','bgmusic.mp3');
-            audioManager.add('kill','kill.mp3');
-            audioManager.play('bgmusic');
-        });
-
-
-
-
-        var scene_1 = new Scene();
-        game.setScene(scene_1);//设置游戏场景
         function init_player() {
             scene_1.clearAllSpirit();//清空所有精灵
             //创建玩家精灵
-            var playerImg=res.getImage('player');
+            var playerImg = res.getImage('player');
             console.log(res);
             var player = new Spirit('player', canvas.width / 2, canvas.height - playerImg.height / 2 * 0.5, playerImg.width, playerImg.height);
             player.setScaleXY(0.5);
@@ -463,7 +486,7 @@
             player.bombTime = 0;
             player.onRun(function () {
                 this.bombTime += 1;
-                if (this.bombTime === 50) {
+                if (this.bombTime === 3500) {
                     this.bombTime = 0;
 
                     var bomb = new Spirit('bomb', Math.floor(Math.random() * canvas.width), -100, 50, 50);
@@ -530,7 +553,7 @@
                     this.addobjTime = 0;
                     var x = Math.floor(Math.random() * canvas.width);
 
-                    var objImg=res.getImage('obj');
+                    var objImg = res.getImage('obj');
 
                     var obj = new Spirit('obj', x, -1 * objImg.height, objImg.width, objImg.height);
 
@@ -556,7 +579,7 @@
                                     gameOver();
                                 }
                             });
-                            objfire.scale=0.5;
+                            objfire.scale = 0.5;
                             objfire.onRun(function () {
                                 this.y += 4;
                                 if (this.y >= canvas.height) {
@@ -572,25 +595,18 @@
             });
             player.onCollision(function (obj) {
                 if (obj.role === 'obj') {
+
                     gameOver();
                 }
             });
             scene_1.addSpirit(player);
         }
-         play=function(){
-            var bgImg=res.getImage('bg');
-            console.log(game);
-            game.play(function(){
-                c.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
-            },function(){
-                //c.drawImage(G.res.zs, 10, 10, G.res.lover.width / 4, G.res.lover.height / 4);
-                c.font = "20px Courier New";
-                c.textAlign = 'left';
-                c.textBaseline = 'top';
-                c.fillStyle = "#ffffff";
-                c.fillText("已消灭飞机:" + zs + " 架", 20, 15);
-                up();
-            });
+
+        play = function () {
+
+
+            gameRender.start();
+
         }
 
 

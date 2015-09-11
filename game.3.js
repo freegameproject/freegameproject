@@ -1,3 +1,4 @@
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 var Game = function (canvasId) {
     this.Precision = 0.7;
     var width = window.innerWidth;
@@ -56,63 +57,45 @@ Game.prototype = {
     setScene: function (Scene) {
         this.Scene = Scene;
     },
-    play: function (before, after) {
-        this.status = 'Playing';
+    setRun:function(before, after){
+        this.before=before;
+        this.after=after;
+    },
+    run: function (requestID) {
+        this.requestID=requestID;
         $this = this;
-        this.timer = setInterval(function () {
-            switch ($this.status) {
-                case ('Playing'):
-                    c.clearRect(0, 0, canvas.width, canvas.height);
-                    before();//用于渲染背景
-                    $this.Scene.Spirits.map(function (spirit, index, arr) {
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        this.before();//用于渲染背景
+        $this.Scene.Spirits.map(function (spirit, index, arr) {
+            switch (true) {
+                case (spirit.canCollision):
+                    //碰撞检测
+                    arr.map(function (obj) {
                         switch (true) {
-                            case (spirit.canCollision):
-                                //碰撞检测
-                                arr.map(function (obj) {
-                                    switch (true) {
-                                        case (spirit != obj):
-                                            //不是自己
-                                            switch (true) {
-                                                case (obj.canCollision):
-                                                    //对方也开启了碰撞检测
-                                                    var ju_x = Math.abs(spirit.x - obj.x);
-                                                    var ju_y = Math.abs(spirit.y - obj.y);
-                                                    if (ju_x < (spirit.w / 2 * spirit.scale + obj.w / 2 * obj.scale) * $this.Precision && ju_y < (spirit.h / 2 * spirit.scale + obj.h / 2 * obj.scale * $this.Precision)) {
-                                                        spirit.collision(obj);
-                                                    }
-                                                    break;
-                                            }
-                                            break;
-                                    }
-                                });
+                            case (spirit != obj):
+                                //不是自己
+                                switch (true) {
+                                    case (obj.canCollision):
+                                        //对方也开启了碰撞检测
+                                        var ju_x = Math.abs(spirit.x - obj.x);
+                                        var ju_y = Math.abs(spirit.y - obj.y);
+                                        if (ju_x < (spirit.w / 2 * spirit.scale + obj.w / 2 * obj.scale) * $this.Precision && ju_y < (spirit.h / 2 * spirit.scale + obj.h / 2 * obj.scale * $this.Precision)) {
+                                            spirit.collision(obj);
+                                        }
+                                        break;
+                                }
                                 break;
                         }
-                        spirit.run();
-                        if (spirit.img == null) {
-                            console.log(spirit.role);
-                        }
-                        c.drawImage(spirit.img, spirit.x - spirit.w / 2 * spirit.scale, spirit.y - spirit.h / 2 * spirit.scale, spirit.w * spirit.scale, spirit.h * spirit.scale);
                     });
-                    after();//渲染分数等
                     break;
             }
-        }, 1000 / 64);
-    },
-    replay: function () {
-
-    },
-    Pause: function () {
-        switch (this.status) {
-            case ('Playing'):
-                this.status = 'Pause';
-                break;
-            case ('Pause'):
-                this.status = 'Playing';
-                break;
-        }
-    },
-    end: function () {
-        clearInterval(this.timer);
+            spirit.run();
+            if (spirit.img == null) {
+                console.log(spirit.role);
+            }
+            c.drawImage(spirit.img, spirit.x - spirit.w / 2 * spirit.scale, spirit.y - spirit.h / 2 * spirit.scale, spirit.w * spirit.scale, spirit.h * spirit.scale);
+        });
+        this.after();//渲染分数等
     }
 }
 
@@ -184,7 +167,7 @@ Res.prototype = {
             img.status = 'loading';
             img.onload = function () {
                 $this.res[resObj.name] = this;
-                $this.resCount+=1;
+                $this.resCount += 1;
                 $this.checkLoadingStatus();
             }
         });
@@ -271,35 +254,64 @@ Spirit.prototype = {
         this.doclick = fn;
     }
 }
-var AudioManager=function(){
-    this.audios=[];
+var AudioManager = function () {
+    this.audios = [];
 
 }
-AudioManager.prototype={
-    add:function(name,src,loop){
-        var audio=new Audio();
-        if(loop===true){
-            audio.loop='loop';
+AudioManager.prototype = {
+    add: function (name, src, loop) {
+        var audio = new Audio();
+        if (loop === true) {
+            audio.loop = 'loop';
         }
-        audio.src=src;
-        this.audios[name]=audio;
+        audio.src = src;
+        this.audios[name] = audio;
     },
-    play:function(name){
-        this.audios[name].currentTime=10;
+    play: function (name) {
+        this.audios[name].currentTime = 10;
         this.audios[name].play();
     }
 }
-var GameRender=function(){
+var GameRender = function () {
 
 }
-GameRender.prototype={
-    setGame:function(game){
-        this.game=game;
+GameRender.prototype = {
+    setGame: function (game) {
+        this.game = game;
     },
-    start:function(){
+    start: function () {
+        var game = this.game;
 
+        function step(time) {
+
+            requestID = requestAnimationFrame(step);
+            game.run(requestID);
+        }
+
+        requestAnimationFrame(step);
     },
-    stop:function(){
-        
+    stop: function () {
+        window.cancelAnimationFrame(this.game.requestID);
+    }
+}
+
+var GameMaker={
+    getGameRender:function(){
+        return new GameRender();
+    },
+    getRes:function(){
+        return new Res();
+    },
+    getGame:function(canvasId){
+        return new Game(canvasId);
+    },
+    getScene:function(){
+        return new Scene();
+    },
+    getSpirit: function (role, x, y, w, h) {
+        return new Spirit(role, x, y, w, h);
+    },
+    getAudioManager:function(){
+        return new AudioManager();
     }
 }
