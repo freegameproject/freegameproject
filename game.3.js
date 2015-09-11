@@ -289,3 +289,17 @@ AudioManager.prototype={
         this.audios[name].play();
     }
 }
+var GameRender=function(){
+
+}
+GameRender.prototype={
+    setGame:function(game){
+        this.game=game;
+    },
+    start:function(){
+
+    },
+    stop:function(){
+        
+    }
+}
