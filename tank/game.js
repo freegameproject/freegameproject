@@ -125,10 +125,13 @@ function updateScreen(time) {
     if (timer === 100) {
         var x = Math.floor(Math.random() * width);
         var y = -100;
-        add_obj('ie', x, y, 30, 30);
+        add_obj('ie', x, y, 50, 50);
         timer = 0;
     }
     c.clearRect(0, 0, canvas.width, canvas.height);
+    /* bg  */
+    c.fillStyle="#000000";
+    c.fillRect(0,0,width,height);
 
     objs.map(function (obj, index, objs) {
         obj.y += 1;
@@ -138,8 +141,31 @@ function updateScreen(time) {
         onCollide(obj, player, function () {
             gameover();
         })
-        c.fillStyle="#2EEE24";
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2, obj.w, obj.h);
+        c.fillStyle = "#879922";
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.h/10, obj.w, obj.h*0.9);
+
+        c.fillStyle = "#BAD137";
+        //c.fillRect(player.x - player.w / 2, player.y - player.h / 2-player.w/10*2, player.w/10*2, player.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
+
+        c.fillStyle = "#BAD137";
+//c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2-obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
+
+        /* obj head */
+        c.fillRect(obj.x - obj.w / 4, obj.y - obj.h / 3, obj.w/2, obj.h/2);
+        /* obj gan */
+        c.fillRect(obj.x - obj.w / 10, obj.y + obj.h/10, obj.w/5, obj.h/2);
     });
 
 
@@ -165,6 +191,7 @@ function updateScreen(time) {
         onCollide(obj, player, function () {
             gameover();
         })
+        c.fillStyle = "#ff0000";
         c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2, obj.w, obj.h);
 
     });
@@ -203,12 +230,38 @@ function updateScreen(time) {
 
     });
 
-    c.fillStyle = "#6363F6";
-    c.fillRect(player.x - player.w / 2, player.y - player.h / 2, player.w, player.h);
+    /* player */
+    /* player body */
+    c.fillStyle = "#879922";
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.h/10, player.w, player.h*0.9);
+
+    c.fillStyle = "#BAD137";
+    //c.fillRect(player.x - player.w / 2, player.y - player.h / 2-player.w/10*2, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*0, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*2, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*4, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*6, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*8, player.w/10*2, player.h/10);
+    c.fillRect(player.x - player.w / 2, player.y - player.h / 2+player.w/10*10, player.w/10*2, player.h/10);
+
+    c.fillStyle = "#BAD137";
+    //c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2-player.w/10*2, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*0, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*2, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*4, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*6, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*8, player.w/10*2, player.h/10);
+    c.fillRect(player.x + player.w / 2-player.w/10*2, player.y - player.h / 2+player.w/10*10, player.w/10*2, player.h/10);
+
+    /* player head */
+    c.fillRect(player.x - player.w / 4, player.y - player.h / 6, player.w/2, player.h/2);
+    /* player gan */
+    c.fillRect(player.x - player.w / 10, player.y - player.h/2-player.h/10, player.w/5, player.h/2);
+
 
     c.font = "20px Arial";
     c.fillStyle = "#ff0000";
-    c.fillText("已经消灭 " + die_ie + " 个IE", 20, 20);
+    c.fillText("已经消灭 " + die_ie + " 个坦克", 20, 20);
 
 
 }
