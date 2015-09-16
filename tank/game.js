@@ -133,40 +133,7 @@ function updateScreen(time) {
     c.fillStyle="#000000";
     c.fillRect(0,0,width,height);
 
-    objs.map(function (obj, index, objs) {
-        obj.y += 1;
-        if (obj.y > height + obj.h) {
-            objs.splice(index, 1);
-        }
-        onCollide(obj, player, function () {
-            gameover();
-        })
-        c.fillStyle = "#879922";
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.h/10, obj.w, obj.h*0.9);
 
-        c.fillStyle = "#BAD137";
-        //c.fillRect(player.x - player.w / 2, player.y - player.h / 2-player.w/10*2, player.w/10*2, player.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
-
-        c.fillStyle = "#BAD137";
-//c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2-obj.w/10*2, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
-        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
-
-        /* obj head */
-        c.fillRect(obj.x - obj.w / 4, obj.y - obj.h / 3, obj.w/2, obj.h/2);
-        /* obj gan */
-        c.fillRect(obj.x - obj.w / 10, obj.y + obj.h/10, obj.w/5, obj.h/2);
-    });
 
 
     obj_fire_time += 1;
@@ -230,6 +197,40 @@ function updateScreen(time) {
 
     });
 
+    objs.map(function (obj, index, objs) {
+        obj.y += 1;
+        if (obj.y > height + obj.h) {
+            objs.splice(index, 1);
+        }
+        onCollide(obj, player, function () {
+            gameover();
+        })
+        c.fillStyle = "#879922";
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.h/10, obj.w, obj.h*0.9);
+
+        c.fillStyle = "#BAD137";
+        //c.fillRect(player.x - player.w / 2, player.y - player.h / 2-player.w/10*2, player.w/10*2, player.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x - obj.w / 2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
+
+        c.fillStyle = "#BAD137";
+//c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2-obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*0, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*2, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*4, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*6, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*8, obj.w/10*2, obj.h/10);
+        c.fillRect(obj.x + obj.w / 2-obj.w/10*2, obj.y - obj.h / 2+obj.w/10*10, obj.w/10*2, obj.h/10);
+
+        /* obj head */
+        c.fillRect(obj.x - obj.w / 4, obj.y - obj.h / 3, obj.w/2, obj.h/2);
+        /* obj gan */
+        c.fillRect(obj.x - obj.w / 10, obj.y + obj.h/10, obj.w/5, obj.h/2);
+    });
     /* player */
     /* player body */
     c.fillStyle = "#879922";
