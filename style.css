@@ -1,4 +1,3953 @@
-.loading{
+.loading {
     /*transform: translateZ(0);*/
     will-change: transform;
+}
+
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+/* line 22, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 50, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+html {
+    font-family: sans-serif;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+/* line 74, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 108, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+h1, .article-excerpt h2 {
+    font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 116, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+b,
+strong {
+    font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 133, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 141, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 154, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 163, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 173, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 181, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 190, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+/* line 197, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+sup {
+    top: -0.5em;
+}
+
+/* line 201, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 213, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+img {
+    border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 221, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 233, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 245, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 256, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 270, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 282, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 297, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 307, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 317, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 328, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 341, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 350, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 360, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+textarea {
+    overflow: auto;
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 373, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_normalize.css */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'ftw-icons';
+    src: url("/fonts/ftw-icons.eot");
+    src: url("/fonts/ftw-icons.eot?#iefix") format("embedded-opentype"), url("/fonts/ftw-icons.ttf") format("truetype"), url("/fonts/ftw-icons.woff") format("woff"), url("/fonts/ftw-icons.svg#ftw-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* line 61, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button, .nav-left, .nav-right, footer form input[type="submit"], .projects-carousel .project .bottom-section a.web-link, footer, footer form input, .friend-container .friend .listening-bubble {
+    background: rgba(14, 24, 33, 0.95);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* line 66, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button a, .nav-left a, .nav-right a, footer form input[type="submit"] a, .projects-carousel .project .bottom-section a.web-link a, footer a, footer form input a, .friend-container .friend .listening-bubble a {
+    color: white;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button a:visited, .nav-left a:visited, .nav-right a:visited, .projects-carousel .project .bottom-section a.web-link a:visited, footer a:visited, .friend-container .friend .listening-bubble a:visited {
+    color: white;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button a:active, .nav-left a:active, .nav-right a:active, .projects-carousel .project .bottom-section a.web-link a:active, footer a:active, .friend-container .friend .listening-bubble a:active {
+    color: #6db691;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button a:hover, .nav-left a:hover, .nav-right a:hover, .projects-carousel .project .bottom-section a.web-link a:hover, footer a:hover, .friend-container .friend .listening-bubble a:hover {
+    color: #6db691;
+}
+
+/* line 71, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.contact-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* line 76, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.contact-info li:before {
+    content: none;
+}
+
+/* line 97, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+ul.clients-and-collaborators, footer form input[type="text"], footer .call-us, footer .email-us, footer .tweet-at-us, footer .our-friends, .product-container, .byline, .business-address {
+    font-family: 'Whitney SSm A', 'Whitney SSm B', Verdana, sans-serif;
+    font-size: 0.66em;
+    line-height: 1.7em;
+}
+
+/* line 104, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button, .nav-left, .nav-right, footer form input[type="submit"], .projects-carousel .project .bottom-section a.web-link, .inline-button, h1, .article-excerpt h2, h2, .meta-data, .friend-container, .inline-author-name {
+    font-family: 'Whitney SSm Small Caps A', 'Whitney SSm Small Caps B', Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* line 110, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+body, .thank-you h1, .thank-you .article-excerpt h2, .article-excerpt .thank-you h2 {
+    font-family: 'Sentinel A', 'Sentinel B', Georgia, serif;
+}
+
+/* line 115, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.ftw-icon, .call-us-icon, .email-us-icon, .tweet-at-us-icon {
+    font-family: 'ftw-icons';
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@-webkit-keyframes bar-1 {
+    /* line 129, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -webkit-transform: scaleY(0.8);
+    }
+
+    /* line 133, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -webkit-transform: scaleY(0.1);
+    }
+}
+
+@-moz-keyframes bar-1 {
+    /* line 129, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -moz-transform: scaleY(0.8);
+    }
+
+    /* line 133, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -moz-transform: scaleY(0.1);
+    }
+}
+
+@-o-keyframes bar-1 {
+    /* line 129, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -o-transform: scaleY(0.8);
+    }
+
+    /* line 133, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -o-transform: scaleY(0.1);
+    }
+}
+
+@keyframes bar-1 {
+    /* line 129, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        transform: scaleY(0.8);
+    }
+
+    /* line 133, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        transform: scaleY(0.1);
+    }
+}
+
+@-webkit-keyframes bar-2 {
+    /* line 139, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -webkit-transform: scaleY(1);
+    }
+
+    /* line 143, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -webkit-transform: scaleY(0.2);
+    }
+}
+
+@-moz-keyframes bar-2 {
+    /* line 139, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -moz-transform: scaleY(1);
+    }
+
+    /* line 143, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -moz-transform: scaleY(0.2);
+    }
+}
+
+@-o-keyframes bar-2 {
+    /* line 139, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -o-transform: scaleY(1);
+    }
+
+    /* line 143, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -o-transform: scaleY(0.2);
+    }
+}
+
+@keyframes bar-2 {
+    /* line 139, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        transform: scaleY(1);
+    }
+
+    /* line 143, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        transform: scaleY(0.2);
+    }
+}
+
+@-webkit-keyframes bar-3 {
+    /* line 149, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -webkit-transform: scaleY(0.6);
+    }
+
+    /* line 153, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -webkit-transform: scaleY(0.15);
+    }
+}
+
+@-moz-keyframes bar-3 {
+    /* line 149, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -moz-transform: scaleY(0.6);
+    }
+
+    /* line 153, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -moz-transform: scaleY(0.15);
+    }
+}
+
+@-o-keyframes bar-3 {
+    /* line 149, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        -o-transform: scaleY(0.6);
+    }
+
+    /* line 153, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        -o-transform: scaleY(0.15);
+    }
+}
+
+@keyframes bar-3 {
+    /* line 149, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    0% {
+        transform: scaleY(0.6);
+    }
+
+    /* line 153, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+    100% {
+        transform: scaleY(0.15);
+    }
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.button, .nav-left, .nav-right, footer form input[type="submit"], .projects-carousel .project .bottom-section a.web-link, .inline-button {
+    color: white;
+    padding: 0.32em 0.75em 0.5em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:visited, .nav-left:visited, .nav-right:visited, footer form input[type="submit"]:visited, .projects-carousel .project .bottom-section a.web-link:visited, .inline-button:visited {
+    color: white;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:active, .nav-left:active, .nav-right:active, footer form input[type="submit"]:active, .projects-carousel .project .bottom-section a.web-link:active, .inline-button:active {
+    color: white;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:hover, .nav-left:hover, .nav-right:hover, footer form input[type="submit"]:hover, .projects-carousel .project .bottom-section a.web-link:hover, .inline-button:hover {
+    color: white;
+}
+
+/* line 15, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.button:hover, .nav-left:hover, .nav-right:hover, footer form input[type="submit"]:hover, .projects-carousel .project .bottom-section a.web-link:hover, .inline-button:hover {
+    background: #6db691;
+}
+
+/* line 32, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.inline-button {
+    color: #1a232c;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    padding: 0.25em 0.5em 0.3em;
+    font-size: 0.6em;
+    line-height: 1em;
+    vertical-align: 15%;
+    border: 1px solid #1a232c;
+    font-weight: 400;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:visited {
+    color: #1a232c;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:active {
+    color: #6db691;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:hover {
+    color: #6db691;
+}
+
+/* line 44, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.inline-button:hover, .inline-button:active {
+    border-color: #6db691;
+    background: none;
+}
+
+/* line 18, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video, body.work .project .project-content .all-devices .ipad-video, body.work .project .project-content .all-devices .iphone-video {
+    -webkit-transition: max-width 0.3s;
+    -moz-transition: max-width 0.3s;
+    transition: max-width 0.3s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(14, 24, 33, 0.95);
+    left: 50%;
+    margin: auto;
+    top: 50%;
+    position: absolute;
+}
+
+/* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video::before, body.work .project .project-content .all-devices .ipad-video::before, body.work .project .project-content .all-devices .iphone-video::before {
+    content: "";
+    display: block;
+}
+
+/* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video .video-player, body.work .project .project-content .all-devices .ipad-video .video-player, body.work .project .project-content .all-devices .iphone-video .video-player {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* line 43, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video {
+    border-radius: 3% 3% 0 0 / 4.5% 4.5% 0 0;
+    max-width: 800px;
+    width: 50%;
+}
+
+/* line 50, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video::before {
+    padding-top: 69.09091%;
+}
+
+/* line 54, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video::after {
+    background: rgba(14, 24, 33, 0.95);
+    content: "\00a0";
+    display: block;
+    font-size: 50%;
+    position: absolute;
+    bottom: 0;
+    width: 120%;
+    height: 5%;
+    left: -10%;
+    border-radius: 0 0 5% 5% / 0 0 50% 50%;
+}
+
+/* line 68, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .desktop-video .video-player {
+    width: 95%;
+    height: 90%;
+}
+
+@media (max-height: 900px) {
+    /* line 43, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .desktop-video {
+        max-width: 500px;
+    }
+}
+
+@media (max-height: 550px) {
+    /* line 43, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .desktop-video {
+        max-width: 350px;
+    }
+}
+
+@media (max-height: 450px) {
+    /* line 43, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .desktop-video {
+        max-width: 250px;
+    }
+}
+
+/* line 86, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .ipad-video {
+    border-radius: 3.51064% / 5%;
+    max-width: 800px;
+    width: 50%;
+}
+
+/* line 93, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .ipad-video::before {
+    padding-top: 70.21277%;
+}
+
+/* line 97, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .ipad-video .video-player {
+    width: 86%;
+    height: 93%;
+}
+
+@media (max-height: 800px) {
+    /* line 86, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .ipad-video {
+        max-width: 500px;
+    }
+}
+
+@media (max-height: 550px) {
+    /* line 86, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .ipad-video {
+        max-width: 350px;
+    }
+}
+
+/* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .iphone-video {
+    border-radius: 10.54113% / 5%;
+    max-width: 275px;
+    width: 40%;
+}
+
+/* line 118, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .iphone-video::before {
+    padding-top: 210.82251%;
+}
+
+/* line 122, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+body.work .project .project-content .all-devices .iphone-video .video-player {
+    width: 90%;
+    height: 76%;
+}
+
+@media (max-height: 850px) {
+    /* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .iphone-video {
+        max-width: 200px;
+    }
+}
+
+@media (max-height: 650px) {
+    /* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .iphone-video {
+        max-width: 160px;
+    }
+}
+
+@media (max-height: 525px) and (min-device-width: 480px) {
+    /* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .iphone-video {
+        max-width: 120px;
+    }
+}
+
+@media (max-height: 400px) and (min-device-width: 480px) {
+    /* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_devices.scss */
+    body.work .project .project-content .all-devices .iphone-video {
+        max-width: 80px;
+    }
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+body {
+    color: #1a232c;
+    font-size: 22px;
+    line-height: 1.4em;
+    background: white;
+}
+
+/* line 13, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+p.emphasis, h3, .thank-you h1, .thank-you .article-excerpt h2, .article-excerpt .thank-you h2 {
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+/* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.narrow-col {
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+/* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.ftw-icon, .call-us-icon, .email-us-icon, .tweet-at-us-icon {
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+/* line 28, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.ftw-icon:after, .call-us-icon:after, .email-us-icon:after, .tweet-at-us-icon:after {
+    content: " ";
+}
+
+/* line 36, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.ftw-icon:before {
+    content: "\00a0";
+}
+
+/* line 57, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+a {
+    color: #1a232c;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+a:visited {
+    color: #1a232c;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+a:active {
+    color: #757b80;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+a:hover {
+    color: #757b80;
+}
+
+/* line 62, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+a:hover {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/* line 67, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+p {
+    margin: 0 0 1em 0;
+    position: relative;
+}
+
+/* line 71, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+p a {
+    text-decoration: none;
+    border-bottom: 1px dotted #1a232c;
+}
+
+/* line 84, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+ul {
+    margin-left: 1.8rem;
+    padding: 0;
+    list-style: none;
+}
+
+/* line 89, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+ul.clients-and-collaborators {
+    -webkit-columns: 3 3em;
+    -moz-columns: 3 3em;
+    columns: 3 3em;
+    margin: 1.5em 0;
+}
+
+/* line 97, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+ul li:before {
+    display: inline-block;
+    content: "\2014";
+    margin-left: -1.8rem;
+    width: 1.8rem;
+}
+
+/* line 106, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+form {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+/* line 111, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+h1, .article-excerpt h2 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 0.4em 0;
+    font-style: normal;
+}
+
+/* line 118, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+h1 a:hover, .article-excerpt h2 a:hover {
+    color: #1a232c;
+}
+
+/* line 123, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+h2 {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 3em 0 1em;
+}
+
+/* line 131, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+h3 {
+    font-weight: 700;
+    margin: 0 0 0.45em 0;
+    text-align: center;
+}
+
+/* line 138, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+hr {
+    outline: none;
+    border: none;
+    border-top: 1px dotted #1a232c;
+    margin: 1em;
+}
+
+/* line 145, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.meta-data {
+    text-align: center;
+    font-size: 0.7em;
+    color: #8c9195;
+    margin: 0 0 1em 0;
+}
+
+/* line 153, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+img {
+    max-width: 100%;
+    margin: 1.5em 0;
+}
+
+/* line 164, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.company-name {
+    font-style: italic;
+}
+
+/* line 168, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_typography.scss */
+.inline-head {
+    font-weight: bold;
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_layout.scss */
+.content {
+    padding: 11em 17% 2em;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* line 17, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_layout.scss */
+footer .content {
+    padding: 0.5em 17% 3em;
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+body {
+    border-top: 5px solid #1a232c;
+}
+
+/* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+.logo {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    width: 40px;
+    top: 6em;
+    margin-left: -20px;
+}
+
+/* line 17, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+.logo:hover {
+    background: none;
+}
+
+/* line 28, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+.nav-left, .nav-right {
+    position: absolute;
+    z-index: 1000;
+    top: 3em;
+}
+
+/* line 35, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+.nav-left {
+    left: 4em;
+}
+
+/* line 40, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_header.scss */
+.nav-right {
+    right: 4em;
+}
+
+/* line 8, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form {
+    position: relative;
+    height: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form input[type="text"] {
+    height: 100%;
+    width: 76%;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0 1em;
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+}
+
+/* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form input[type="text"]:focus {
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+    border-color: #6db691;
+}
+
+/* line 40, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form input[type="submit"] {
+    color: #1a232c;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    right: 0;
+    background: white;
+    width: 22%;
+    color: #1a232c !important;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer form input[type="submit"]:visited {
+    color: #1a232c;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer form input[type="submit"]:active {
+    color: #1a232c;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer form input[type="submit"]:hover {
+    color: #1a232c;
+}
+
+/* line 49, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer form input[type="submit"]:hover {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    color: #1a232c !important;
+}
+
+/* line 57, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .call-us, footer .email-us, footer .tweet-at-us, footer .our-friends {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 1.5em 0 2em;
+    border-top: 1px dotted #303841;
+    vertical-align: bottom;
+    border-bottom: 1em solid white;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer .call-us:visited, footer .email-us:visited, footer .tweet-at-us:visited, footer .our-friends:visited {
+    color: white;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer .call-us:active, footer .email-us:active, footer .tweet-at-us:active, footer .our-friends:active {
+    color: white;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+footer .call-us:hover, footer .email-us:hover, footer .tweet-at-us:hover, footer .our-friends:hover {
+    color: white;
+}
+
+/* line 70, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .call-us:last-of-type, footer .email-us:last-of-type, footer .tweet-at-us:last-of-type, footer .our-friends:last-of-type {
+    border-right: none;
+}
+
+/* line 75, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .call-us {
+    width: 17%;
+    border-bottom-color: #6673c6;
+}
+
+/* line 80, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .call-us:hover {
+    background: #4c5893;
+}
+
+/* line 85, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .email-us {
+    width: 27%;
+    border-bottom-color: #2b5271;
+}
+
+/* line 90, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .email-us:hover {
+    background: #25425a;
+}
+
+/* line 95, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .tweet-at-us {
+    width: 21%;
+    border-bottom-color: #6db691;
+}
+
+/* line 100, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .tweet-at-us:hover {
+    background: #51856f;
+}
+
+/* line 105, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .our-friends {
+    width: 35%;
+    border-bottom-color: #d94a54;
+}
+
+/* line 110, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_footer.scss */
+footer .our-friends:hover {
+    background: #993d46;
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container {
+    margin: 2em auto 0;
+    text-align: center;
+}
+
+/* line 10, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    width: 20%;
+}
+
+/* line 17, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend.not-listening .listening-bubble, .friend-container .friend.not-listening .image-headphones {
+    display: none;
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.andy_mangold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 87.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.andy_mangold:hover {
+    background-position: 87.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.andy_mangold.headphones {
+    background-position: 87.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.andy_mangold.headphones:hover {
+    background-position: 87.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.andy_mangold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.andy_mangold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.josh_hepworth {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 62.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.josh_hepworth:hover {
+    background-position: 62.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.josh_hepworth.headphones {
+    background-position: 62.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.josh_hepworth.headphones:hover {
+    background-position: 62.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.josh_hepworth {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.josh_hepworth {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.dan_martens {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 25% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dan_martens:hover {
+    background-position: 25% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dan_martens.headphones {
+    background-position: 25% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dan_martens.headphones:hover {
+    background-position: 25% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.dan_martens {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.dan_martens {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.anthony_mattox {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 0% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.anthony_mattox:hover {
+    background-position: 0% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.anthony_mattox.headphones {
+    background-position: 0% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.anthony_mattox.headphones:hover {
+    background-position: 0% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.anthony_mattox {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.anthony_mattox {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.mary_mohler {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.mary_mohler:hover {
+    background-position: 100% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.mary_mohler.headphones {
+    background-position: 100% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.mary_mohler.headphones:hover {
+    background-position: 100% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.mary_mohler {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.mary_mohler {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.tim_arnold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 75% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.tim_arnold:hover {
+    background-position: 75% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.tim_arnold.headphones {
+    background-position: 75% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.tim_arnold.headphones:hover {
+    background-position: 75% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.tim_arnold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.tim_arnold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.vaidehi_joshi {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.vaidehi_joshi:hover {
+    background-position: 50% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.vaidehi_joshi.headphones {
+    background-position: 50% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.vaidehi_joshi.headphones:hover {
+    background-position: 50% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.trevor_carr {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 37.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.trevor_carr:hover {
+    background-position: 37.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.trevor_carr.headphones {
+    background-position: 37.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.trevor_carr.headphones:hover {
+    background-position: 37.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.trevor_carr {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.trevor_carr {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .image.dai_foldes {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 82%;
+    padding: 41% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 12.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dai_foldes:hover {
+    background-position: 12.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dai_foldes.headphones {
+    background-position: 12.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.friend-container .friend .image.dai_foldes.headphones:hover {
+    background-position: 12.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.dai_foldes {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+    .friend-container .friend .image.dai_foldes {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 35, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 10%;
+    border-radius: 1.5em 1.5em 1.5em 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0.5em 0.75em 0.6em;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble.not-listening {
+    display: none;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble marquee {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    height: 1em;
+    position: absolute;
+    top: 0.85em;
+    left: 0.75em;
+    right: 3em;
+    opacity: 0;
+}
+
+/* line 62, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble marquee .artist {
+    font-weight: 700;
+}
+
+/* line 65, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble marquee .artist:after {
+    content: " -";
+}
+
+/* line 70, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble marquee .album:after {
+    content: " -";
+}
+
+/* line 75, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble .visualizer {
+    position: absolute;
+    top: 10px;
+    bottom: 12px;
+    right: 12px;
+    width: 16px;
+}
+
+/* line 82, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble .visualizer .bar-1, .friend-container .friend .listening-bubble .visualizer .bar-2, .friend-container .friend .listening-bubble .visualizer .bar-3 {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    width: 2px;
+    height: 100%;
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* line 92, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble .visualizer .bar-1 {
+    -webkit-animation: bar-1 0.5s infinite;
+    -moz-animation: bar-1 0.5s infinite;
+    animation: bar-1 0.5s infinite;
+    left: 0;
+    height: 67%;
+}
+
+/* line 99, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble .visualizer .bar-2 {
+    -webkit-animation: bar-2 1s infinite;
+    -moz-animation: bar-2 1s infinite;
+    animation: bar-2 1s infinite;
+    left: 50%;
+    margin-left: -1px;
+    height: 100%;
+}
+
+/* line 107, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble .visualizer .bar-3 {
+    -webkit-animation: bar-3 0.25s infinite;
+    -moz-animation: bar-3 0.25s infinite;
+    animation: bar-3 0.25s infinite;
+    right: 0;
+    height: 33%;
+}
+
+/* line 115, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble:hover {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    min-width: 100%;
+    border-radius: 1.5em;
+}
+
+/* line 120, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .listening-bubble:hover marquee {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 1;
+}
+
+/* line 127, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .info {
+    padding: 1em 0 3em;
+}
+
+/* line 130, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .info h3 {
+    font-size: inherit;
+    margin: 0 0 0.2em;
+}
+
+/* line 135, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .info a {
+    color: #8c9195;
+}
+
+/* line 138, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .info a:hover {
+    color: #6db691;
+    background: none;
+}
+
+/* line 145, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_portraits.scss */
+.friend-container .friend .twitterless-spacer {
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+}
+
+/* line 2, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_logo.scss */
+svg .square-1 {
+    fill: #6673c6;
+}
+
+/* line 6, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_logo.scss */
+svg .square-2 {
+    fill: #2b5271;
+}
+
+/* line 10, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_logo.scss */
+svg .square-3 {
+    fill: #6db691;
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+p.homepage-blurb {
+    margin: 0 0 3em;
+}
+
+/* line 8, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+p.homepage-blurb .company-name {
+    font-weight: 700;
+}
+
+/* line 18, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container {
+    text-align: center;
+    margin: 2em auto;
+}
+
+/* line 23, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: top;
+    margin: 0 0 1em 0;
+}
+
+/* line 28, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product.major {
+    width: 33.33%;
+}
+
+/* line 32, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product.minor {
+    width: 25%;
+}
+
+/* line 36, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product .product-logo {
+    padding: 3em 0;
+}
+
+/* line 39, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product .product-logo img {
+    width: 66%;
+}
+
+/* line 44, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product .info {
+    text-align: left;
+    margin: 0 1em;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_index.scss */
+.product-container .product .info h3 {
+    text-align: left;
+    font-size: 1em;
+}
+
+/* line 1, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_writing.scss */
+.article-excerpt {
+    margin: 0 0 5em 0;
+    display: block;
+    position: relative;
+}
+
+/* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_writing.scss */
+.article-excerpt h2 a {
+    display: block;
+}
+
+/* line 12, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_writing.scss */
+.article-excerpt h2 a:hover {
+    background: none;
+}
+
+/* line 15, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_writing.scss */
+.article-excerpt h2 a:hover span {
+    border-bottom: 1px dotted #1a232c;
+}
+
+/* line 4, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline {
+    border-top: 1px dotted #1a232c;
+    margin: 2.5em 0;
+    padding: 2.5em 0;
+}
+
+/* line 10, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait {
+    margin-right: 7%;
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.andy_mangold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 87.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.andy_mangold:hover {
+    background-position: 87.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.andy_mangold.headphones {
+    background-position: 87.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.andy_mangold.headphones:hover {
+    background-position: 87.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.andy_mangold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.andy_mangold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.josh_hepworth {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 62.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.josh_hepworth:hover {
+    background-position: 62.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.josh_hepworth.headphones {
+    background-position: 62.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.josh_hepworth.headphones:hover {
+    background-position: 62.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.josh_hepworth {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.josh_hepworth {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.dan_martens {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 25% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dan_martens:hover {
+    background-position: 25% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dan_martens.headphones {
+    background-position: 25% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dan_martens.headphones:hover {
+    background-position: 25% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.dan_martens {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.dan_martens {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.anthony_mattox {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 0% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.anthony_mattox:hover {
+    background-position: 0% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.anthony_mattox.headphones {
+    background-position: 0% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.anthony_mattox.headphones:hover {
+    background-position: 0% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.anthony_mattox {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.anthony_mattox {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.mary_mohler {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.mary_mohler:hover {
+    background-position: 100% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.mary_mohler.headphones {
+    background-position: 100% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.mary_mohler.headphones:hover {
+    background-position: 100% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.mary_mohler {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.mary_mohler {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.tim_arnold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 75% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.tim_arnold:hover {
+    background-position: 75% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.tim_arnold.headphones {
+    background-position: 75% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.tim_arnold.headphones:hover {
+    background-position: 75% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.tim_arnold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.tim_arnold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.vaidehi_joshi {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.vaidehi_joshi:hover {
+    background-position: 50% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.vaidehi_joshi.headphones {
+    background-position: 50% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.vaidehi_joshi.headphones:hover {
+    background-position: 50% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.trevor_carr {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 37.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.trevor_carr:hover {
+    background-position: 37.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.trevor_carr.headphones {
+    background-position: 37.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.trevor_carr.headphones:hover {
+    background-position: 37.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.trevor_carr {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.trevor_carr {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-portrait.dai_foldes {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 12.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dai_foldes:hover {
+    background-position: 12.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dai_foldes.headphones {
+    background-position: 12.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.byline .author-portrait.dai_foldes.headphones:hover {
+    background-position: 12.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.dai_foldes {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .byline .author-portrait.dai_foldes {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 20, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.byline .author-info {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    width: 73%;
+    vertical-align: middle;
+}
+
+/* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author {
+    position: absolute;
+    left: -14%;
+    top: 0;
+    margin-bottom: -10%;
+    display: block !important;
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.andy_mangold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 87.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.andy_mangold:hover {
+    background-position: 87.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.andy_mangold.headphones {
+    background-position: 87.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.andy_mangold.headphones:hover {
+    background-position: 87.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.andy_mangold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.andy_mangold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.josh_hepworth {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 62.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.josh_hepworth:hover {
+    background-position: 62.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.josh_hepworth.headphones {
+    background-position: 62.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.josh_hepworth.headphones:hover {
+    background-position: 62.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.josh_hepworth {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.josh_hepworth {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.dan_martens {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 25% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dan_martens:hover {
+    background-position: 25% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dan_martens.headphones {
+    background-position: 25% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dan_martens.headphones:hover {
+    background-position: 25% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.dan_martens {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.dan_martens {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.anthony_mattox {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 0% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.anthony_mattox:hover {
+    background-position: 0% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.anthony_mattox.headphones {
+    background-position: 0% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.anthony_mattox.headphones:hover {
+    background-position: 0% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.anthony_mattox {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.anthony_mattox {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.mary_mohler {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.mary_mohler:hover {
+    background-position: 100% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.mary_mohler.headphones {
+    background-position: 100% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.mary_mohler.headphones:hover {
+    background-position: 100% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.mary_mohler {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.mary_mohler {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.tim_arnold {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 75% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.tim_arnold:hover {
+    background-position: 75% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.tim_arnold.headphones {
+    background-position: 75% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.tim_arnold.headphones:hover {
+    background-position: 75% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.tim_arnold {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.tim_arnold {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.vaidehi_joshi {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.vaidehi_joshi:hover {
+    background-position: 50% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.vaidehi_joshi.headphones {
+    background-position: 50% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.vaidehi_joshi.headphones:hover {
+    background-position: 50% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.vaidehi_joshi {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.trevor_carr {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 37.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.trevor_carr:hover {
+    background-position: 37.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.trevor_carr.headphones {
+    background-position: 37.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.trevor_carr.headphones:hover {
+    background-position: 37.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.trevor_carr {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.trevor_carr {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author.dai_foldes {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: middle;
+    background-image: url("/images/portrait-sprite.jpg");
+    width: 10%;
+    padding: 5% 0;
+    border-radius: 50%;
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    background-position: 12.5% 0;
+    position: relative;
+}
+
+/* line 218, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dai_foldes:hover {
+    background-position: 12.5% 100%;
+}
+
+/* line 222, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dai_foldes.headphones {
+    background-position: 12.5% 0;
+}
+
+/* line 225, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-author.dai_foldes.headphones:hover {
+    background-position: 12.5% 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.dai_foldes {
+        background-image: url("/images/portrait-sprite@2x.jpg");
+    }
+}
+
+@media (max-device-width: 1024px) {
+    /* line 37, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+    .inline-author.dai_foldes {
+        background-image: url("/images/portrait-sprite.jpg");
+    }
+}
+
+/* line 43, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_article.scss */
+.inline-author-name {
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+/* line 1, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info, .business-address {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: top;
+}
+
+/* line 6, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info {
+    width: 68%;
+    line-height: 1.75em;
+}
+
+/* line 12, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info li a:hover {
+    color: #1a232c;
+}
+
+/* line 15, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info li a:hover .label {
+    border-bottom: 1px dotted #1a232c;
+}
+
+/* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info li a:hover .call-us-icon {
+    color: #6673c6;
+}
+
+/* line 23, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info li a:hover .email-us-icon {
+    color: #2b5271;
+}
+
+/* line 27, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.contact-info li a:hover .tweet-at-us-icon {
+    color: #6db691;
+}
+
+/* line 33, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_hire-us.scss */
+.business-address {
+    width: 32%;
+}
+
+/* line 1, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* line 6, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work {
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    transition: background 1s;
+    overflow: hidden;
+    border: none;
+    color: rgba(14, 24, 33, 0.95);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* line 15, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work a {
+    color: rgba(14, 24, 33, 0.95);
+    text-decoration: underline;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+body.work a:visited {
+    color: rgba(14, 24, 33, 0.95);
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+body.work a:active {
+    color: white;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+body.work a:hover {
+    color: white;
+}
+
+/* line 20, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work svg {
+    -webkit-transition: fill 0.2s;
+    -moz-transition: fill 0.2s;
+    transition: fill 0.2s;
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work #all,
+body.work .current-page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* line 73, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.right-arrow, .left-arrow {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    text-align: center;
+    width: 10%;
+    z-index: 2;
+}
+
+/* line 85, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.right-arrow:hover svg, .left-arrow:hover svg {
+    fill: white;
+}
+
+/* line 90, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.right-arrow svg, .left-arrow svg {
+    -webkit-transition: fill, 0.2s;
+    -moz-transition: fill, 0.2s;
+    transition: fill, 0.2s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+    fill: rgba(14, 24, 33, 0.95);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+    /* line 103, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+    .right-arrow svg, .left-arrow svg {
+        width: 32px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    /* line 109, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+    .right-arrow svg, .left-arrow svg {
+        width: 24px;
+    }
+}
+
+/* line 115, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.right-arrow {
+    right: 0;
+}
+
+/* line 121, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.left-arrow {
+    left: 0;
+}
+
+/* line 127, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel {
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transform: translate3d(0, 0, 0);
+    position: absolute;
+    left: 0;
+    width: 10000%;
+    height: 100%;
+}
+
+/* line 135, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project {
+    position: relative;
+    float: left;
+    width: 1%;
+}
+
+/* line 140, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section .section-content .title, .projects-carousel .project .bottom-section .section-content .title, .projects-carousel .project .bottom-section .info-icon svg, .projects-carousel .project .bottom-section a.app-store-link svg.app-store-badge, .projects-carousel .project .info-overlay p {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+}
+
+/* line 146, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section, .projects-carousel .project .bottom-section {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+}
+
+/* line 155, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section .section-content, .projects-carousel .project .bottom-section .section-content {
+    height: 100%;
+}
+
+/* line 164, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section {
+    top: 10%;
+}
+
+/* line 169, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section h1, .projects-carousel .project .top-section .article-excerpt h2, .article-excerpt .projects-carousel .project .top-section h2 {
+    margin: 0;
+}
+
+/* line 173, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .top-section .collaborator {
+    font-style: italic;
+}
+
+/* line 179, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section {
+    bottom: 8%;
+    height: 10%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+}
+
+/* line 190, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section .title {
+    font-style: italic;
+}
+
+/* line 194, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section .info-icon {
+    position: absolute;
+    left: 1em;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 20%;
+}
+
+/* line 202, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section .info-icon:hover {
+    cursor: pointer;
+}
+
+/* line 205, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section .info-icon:hover svg {
+    fill: white;
+}
+
+/* line 210, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section .info-icon svg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 50%;
+    fill: rgba(14, 24, 33, 0.95);
+}
+
+/* line 224, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section a.app-store-link:hover svg.app-store-badge {
+    cursor: pointer;
+    fill: white;
+}
+
+/* line 229, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section a.app-store-link svg.app-store-badge {
+    position: absolute;
+    right: 1em;
+    width: 20%;
+    fill: rgba(14, 24, 33, 0.95);
+}
+
+/* line 238, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section a.web-link {
+    position: absolute;
+    font-style: normal;
+    top: 50%;
+    right: 2.5em;
+    margin: -1.01em 0 0 0;
+}
+
+/* line 246, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .bottom-section a.web-link:hover {
+    background: white !important;
+}
+
+/* line 252, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .info-overlay {
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: -25%;
+    background: white;
+    z-index: 40;
+    text-align: center;
+}
+
+/* line 265, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .info-overlay p {
+    padding: 0 33%;
+}
+
+/* line 271, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+/* line 278, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices {
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* line 285, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container {
+    -webkit-transition: top 0.3s, bottom 0.3s;
+    -moz-transition: top 0.3s, bottom 0.3s;
+    transition: top 0.3s, bottom 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* line 294, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.top-device {
+    bottom: -40px;
+    z-index: 2;
+}
+
+/* line 298, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.top-device iframe {
+    pointer-events: none;
+}
+
+/* line 302, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.top-device .ipad-video {
+    bottom: 0;
+    margin: 0;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+/* line 310, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.bottom-device {
+    top: -40px;
+    z-index: 2;
+}
+
+/* line 314, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.bottom-device iframe {
+    pointer-events: none;
+}
+
+/* line 318, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.bottom-device .iphone-video {
+    top: 0;
+    margin: 0;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+/* line 326, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container:only-of-type {
+    cursor: default;
+}
+
+/* line 330, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.bottom-device:hover {
+    top: -50px;
+}
+
+/* line 334, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+.projects-carousel .project .project-content .all-devices .device-container.top-device:hover {
+    bottom: -50px;
+}
+
+/* line 45, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work .project {
+    height: 100%;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work .project .project-content {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* line 54, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_work.scss */
+body.work .project .project-content .all-devices {
+    height: 100%;
+}
+
+/* line 1, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.job-listing {
+    padding: 1em 1.5em 1.5em;
+    margin: 2em 0;
+    border-radius: 0.2em;
+    border-top: 6px solid #6673c6;
+    box-shadow: 0 5px 20px #dcdedf;
+}
+
+/* line 8, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.job-listing h2 {
+    margin-top: 0;
+}
+
+/* line 12, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.job-listing:nth-of-type(2) {
+    border-top-color: #6db691;
+}
+
+/* line 16, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.job-listing:nth-of-type(3) {
+    border-top-color: #2b5271;
+}
+
+/* line 20, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.job-listing:nth-of-type(3) {
+    border-top-color: #d94a54;
+}
+
+/* line 25, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_jobs.scss */
+.jobs-link {
+    text-align: center;
+    padding: 0 0 2.5em;
+}
+
+/* line 1, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_confirmation.scss */
+.thank-you {
+    text-align: center;
+}
+
+/* line 4, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_confirmation.scss */
+.thank-you h1, .thank-you .article-excerpt h2, .article-excerpt .thank-you h2 {
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 1.5em;
+}
+
+/* line 11, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_confirmation.scss */
+.thank-you h1 svg, .thank-you .article-excerpt h2 svg, .article-excerpt .thank-you h2 svg {
+    vertical-align: -10%;
+    margin: 0 0.2em;
+}
+
+/* line 5, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.button, .nav-left, .nav-right, footer form input[type="submit"], .projects-carousel .project .bottom-section a.web-link, .inline-button {
+    color: white;
+    padding: 0.32em 0.75em 0.5em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:visited, .nav-left:visited, .nav-right:visited, footer form input[type="submit"]:visited, .projects-carousel .project .bottom-section a.web-link:visited, .inline-button:visited {
+    color: white;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:active, .nav-left:active, .nav-right:active, footer form input[type="submit"]:active, .projects-carousel .project .bottom-section a.web-link:active, .inline-button:active {
+    color: white;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.button:hover, .nav-left:hover, .nav-right:hover, footer form input[type="submit"]:hover, .projects-carousel .project .bottom-section a.web-link:hover, .inline-button:hover {
+    color: white;
+}
+
+/* line 15, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.button:hover, .nav-left:hover, .nav-right:hover, footer form input[type="submit"]:hover, .projects-carousel .project .bottom-section a.web-link:hover, .inline-button:hover {
+    background: #6db691;
+}
+
+/* line 32, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.inline-button {
+    color: #1a232c;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    padding: 0.25em 0.5em 0.3em;
+    font-size: 0.6em;
+    line-height: 1em;
+    vertical-align: 15%;
+    border: 1px solid #1a232c;
+    font-weight: 400;
+}
+
+/* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:visited {
+    color: #1a232c;
+}
+
+/* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:active {
+    color: #6db691;
+}
+
+/* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_globals.scss */
+.inline-button:hover {
+    color: #6db691;
+}
+
+/* line 44, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_buttons.scss */
+.inline-button:hover, .inline-button:active {
+    border-color: #6db691;
+    background: none;
+}
+
+@media screen and (max-width: 480px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 16px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 1 3em;
+        -moz-columns: 1 3em;
+        columns: 1 3em;
+        font-size: 0.9em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 50%;
+    }
+
+    /* line 48, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .homepage-blurb {
+        text-align: center;
+    }
+
+    /* line 52, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .nav-left {
+        left: 6%;
+    }
+
+    /* line 56, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .nav-right {
+        right: 6%;
+    }
+
+    /* line 60, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .inline-author {
+        display: none !important;
+    }
+
+    /* line 65, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .contact-info,
+    .business-address {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    /* line 70, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 9px;
+        bottom: 9px;
+        right: 9px;
+        width: 12px;
+    }
+
+    /* line 80, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us,
+    footer .email-us,
+    footer .tweet-at-us {
+        width: 33.3333%;
+        padding: 2em 0;
+        border-bottom: none;
+        border-right: 1px dotted #303841;
+    }
+
+    /* line 86, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us .label,
+    footer .email-us .label,
+    footer .tweet-at-us .label {
+        display: none;
+    }
+
+    /* line 91, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .tweet-at-us {
+        border-right: none;
+    }
+
+    /* line 95, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .our-friends {
+        padding: 2em 0 2.2em;
+        width: 100%;
+    }
+
+    /* line 102, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us-icon,
+    footer .tweet-at-us-icon,
+    footer .email-us-icon {
+        font-size: 1.5em;
+    }
+
+    /* line 108, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer form input[type="text"] {
+        width: 68%;
+    }
+
+    /* line 112, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer form input[type="submit"] {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 659px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 17px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 1 3em;
+        -moz-columns: 1 3em;
+        columns: 1 3em;
+        font-size: 0.9em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 33%;
+    }
+
+    /* line 123, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .homepage-blurb {
+        text-align: center;
+    }
+
+    /* line 127, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .inline-author {
+        display: none !important;
+    }
+
+    /* line 132, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .contact-info,
+    .business-address {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    /* line 137, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 9px;
+        bottom: 9px;
+        right: 9px;
+        width: 14px;
+    }
+
+    /* line 147, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us,
+    footer .email-us,
+    footer .tweet-at-us {
+        width: 15%;
+        padding: 1.75em 0;
+    }
+
+    /* line 151, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us .label,
+    footer .email-us .label,
+    footer .tweet-at-us .label {
+        display: none;
+    }
+
+    /* line 156, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .our-friends {
+        width: 55%;
+    }
+
+    /* line 162, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us-icon,
+    footer .tweet-at-us-icon,
+    footer .email-us-icon {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 839px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 18px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 2 3em;
+        -moz-columns: 2 3em;
+        columns: 2 3em;
+        font-size: 0.66em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 33%;
+    }
+
+    /* line 171, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 9px;
+        bottom: 9px;
+        right: 10px;
+        width: 14px;
+    }
+
+    /* line 181, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us,
+    footer .email-us,
+    footer .tweet-at-us {
+        width: 15%;
+        padding: 1.75em 0;
+    }
+
+    /* line 185, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us .label,
+    footer .email-us .label,
+    footer .tweet-at-us .label {
+        display: none;
+    }
+
+    /* line 190, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .our-friends {
+        width: 55%;
+    }
+
+    /* line 196, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us-icon,
+    footer .tweet-at-us-icon,
+    footer .email-us-icon {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1019px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 19px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 2 3em;
+        -moz-columns: 2 3em;
+        columns: 2 3em;
+        font-size: 0.66em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 25%;
+    }
+
+    /* line 205, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 9px;
+        bottom: 9px;
+        right: 11px;
+        width: 14px;
+    }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1199px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 20px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 14%;
+        padding-right: 14%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 14%;
+        margin-right: 14%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 3 3em;
+        -moz-columns: 3 3em;
+        columns: 3 3em;
+        font-size: 0.66em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 25%;
+    }
+
+    /* line 216, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 10px;
+        bottom: 10px;
+        right: 11px;
+        width: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1379px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 21px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 11%;
+        padding-right: 11%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 17%;
+        padding-right: 17%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 3 3em;
+        -moz-columns: 3 3em;
+        columns: 3 3em;
+        font-size: 0.66em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 20%;
+    }
+
+    /* line 227, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 10px;
+        bottom: 11px;
+        right: 11px;
+        width: 16px;
+    }
+}
+
+@media screen and (min-width: 1380px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 22px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 3 3em;
+        -moz-columns: 3 3em;
+        columns: 3 3em;
+        font-size: 0.66em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 20%;
+    }
+
+    /* line 238, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 10px;
+        bottom: 12px;
+        right: 12px;
+        width: 16px;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* line 9, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    body {
+        font-size: 16px;
+    }
+
+    /* line 14, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .content,
+    footer .content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* line 19, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .narrow-col {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    /* line 24, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    form {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    /* line 29, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    ul.clients-and-collaborators {
+        -webkit-columns: 1 3em;
+        -moz-columns: 1 3em;
+        columns: 1 3em;
+        font-size: 0.9em;
+    }
+
+    /* line 34, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend {
+        width: 50%;
+    }
+
+    /* line 255, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .homepage-blurb {
+        text-align: center;
+    }
+
+    /* line 259, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .nav-left {
+        left: 6%;
+    }
+
+    /* line 263, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .nav-right {
+        right: 6%;
+    }
+
+    /* line 267, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .inline-author {
+        display: none !important;
+    }
+
+    /* line 272, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .contact-info,
+    .business-address {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    /* line 277, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    .friend-container .friend .listening-bubble .visualizer {
+        top: 9px;
+        bottom: 8px;
+        right: 9px;
+        width: 12px;
+    }
+
+    /* line 287, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us,
+    footer .email-us,
+    footer .tweet-at-us {
+        width: 33.3333%;
+        padding: 2em 0;
+        border-bottom: none;
+        border-right: 1px dotted #303841;
+    }
+
+    /* line 293, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us .label,
+    footer .email-us .label,
+    footer .tweet-at-us .label {
+        display: none;
+    }
+
+    /* line 298, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .tweet-at-us {
+        border-right: none;
+    }
+
+    /* line 302, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .our-friends {
+        padding: 2em 0 2.2em;
+        width: 100%;
+    }
+
+    /* line 309, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer .call-us-icon,
+    footer .tweet-at-us-icon,
+    footer .email-us-icon {
+        font-size: 1.5em;
+    }
+
+    /* line 315, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer form input[type="text"] {
+        width: 68%;
+    }
+
+    /* line 319, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/_media-queries.scss */
+    footer form input[type="submit"] {
+        width: 30%;
+    }
+}
+
+/* line 26, /home/rof/src/github.com/friendsoftheweb/friendsofthewebsite/source/stylesheets/all.scss */
+.current-page, .next-page {
+    position: relative;
 }

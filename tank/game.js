@@ -112,7 +112,7 @@ function init_player() {
         role: 'player',
         x: x,
         y: y,
-        w: 50,
+        w: 40,
         h: 50,
         i: res['player']
     };
@@ -125,7 +125,7 @@ function updateScreen(time) {
     if (timer === 100) {
         var x = Math.floor(Math.random() * width);
         var y = -100;
-        add_obj('ie', x, y, 50, 50);
+        add_obj('ie', x, y, 40, 50);
         timer = 0;
     }
     c.clearRect(0, 0, canvas.width, canvas.height);
