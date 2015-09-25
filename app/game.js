@@ -126,10 +126,11 @@ function updateScreen(time) {
         var x = Math.floor(Math.random() * width);
         var y = -100;
         var index=Math.floor(Math.random() * 20);
-        add_obj('res'+index, x, y, 30, 30);
+        add_obj('res'+index, x, y, 50, 50);
         timer = 0;
     }
     c.clearRect(0, 0, canvas.width, canvas.height);
+    c.drawImage(res['bg'],0,0,width,height);
 
     objs.map(function (obj, index, objs) {
         obj.y += 1;
@@ -205,9 +206,9 @@ function updateScreen(time) {
 
     c.drawImage(player.i, player.x - player.w / 2, player.y - player.h / 2, player.w, player.h);
 
-    c.font = "20px Arial";
-    c.fillStyle = "#ff0000";
-    c.fillText("已经消灭 " + die_ie + " 个app", 20, 20);
+    c.font = "14px Arial";
+    c.fillStyle = "#ffffff";
+    c.fillText("已经消灭 " + die_ie + " 个app", 120, 18);
 
 
 }
@@ -279,11 +280,12 @@ function gameover() {
 /**/
 
 load_img('player', 'player.png');
+load_img('bg', 'bg.png');
 for (i = 0; i < 20; i++) {
     load_img('res' + i, i + '.jpg');
 }
 
-res_count = 21;
+res_count = 22;
 ready(function () {
     restart();
 });
